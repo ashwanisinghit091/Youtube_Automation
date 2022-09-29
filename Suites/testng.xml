@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+
+
+
+
+
+<suite name="Suite" >
+<listeners>
+<listener class-name="ashwani.Listeners.Listeners"/>
+</listeners>
+
+<groups>
+<run>
+
+<include name="Smoke"/>
+
+
+</run>
+
+</groups>
+  <test name="Test1">
+   <parameters>
+<parameter name="user" value="Ashwani"/>
+<parameter name="pswd" value="Alka"/>
+</parameters>
+    <classes>
+      <class name="ashwani.TestCasePackage.TestCase1"/>
+      
+    </classes>
+  </test> <!-- Test -->
+   <test name="Test2">
+    <classes>
+      <class name="ashwani.TestCasePackage.TestCase2"/>
+    </classes>
+  </test>
+  
+  
+</suite> <!-- Suite -->

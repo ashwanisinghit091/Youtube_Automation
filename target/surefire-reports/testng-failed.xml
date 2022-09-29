@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="ashwani.TestCasePackage.TestCase2">
+        <methods>
+          <include name="close"/>
+          <include name="getMeLive"/>
+          <include name="Invoke"/>
+        </methods>
+      </class> <!-- ashwani.TestCasePackage.TestCase2 -->
+      <class name="ashwani.TestCasePackage.TestCase1">
+        <methods>
+          <include name="playMusicOnYoutube"/>
+          <include name="close"/>
+          <include name="Invoke"/>
+        </methods>
+      </class> <!-- ashwani.TestCasePackage.TestCase1 -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite]">
+  <parameter name="pswd" value="Alka"/>
+  <parameter name="user" value="Ashwani"/>
+  <listeners>
+    <listener class-name="ashwani.Listeners.Listeners"/>
+  </listeners>
+  <test name="Test3(failed)">
+    <parameter name="pswd" value="Alka"/>
+    <parameter name="user" value="Ashwani"/>
+    <classes>
+      <class name="ashwani.TestCasePackage.TestCase1">
+        <methods>
+          <include name="playMusicOnYoutube"/>
+          <include name="sortComments"/>
+          <include name="Invoke"/>
+        </methods>
+      </class> <!-- ashwani.TestCasePackage.TestCase1 -->
+      <class name="ashwani.TestCasePackage.TestCase2">
+        <methods>
+          <include name="Invoke"/>
+        </methods>
+      </class> <!-- ashwani.TestCasePackage.TestCase2 -->
+    </classes>
+  </test> <!-- Test3(failed) -->
+</suite> <!-- Failed suite [Suite] -->
