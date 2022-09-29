@@ -14,7 +14,7 @@
   <test name="Test3">
  <parameters>
 <parameter name="user" value="Ashwani"/>
-<parameter name="pswd" value="Alka"/>
+<parameter name="pswd" value="Succesfull"/>
 </parameters>
 
     <classes>

@@ -15,38 +15,12 @@
       </run>
     </groups>
     <classes>
-      <class name="ashwani.TestCasePackage.TestCase2">
-        <methods>
-          <include name="Invoke"/>
-        </methods>
-      </class> <!-- ashwani.TestCasePackage.TestCase2 -->
       <class name="ashwani.TestCasePackage.TestCase1">
         <methods>
-          <include name="playMusicOnYoutube"/>
-          <include name="sortComments"/>
+          <include name="playMusicOnYoutube" invocation-numbers="0"/>
           <include name="Invoke"/>
         </methods>
       </class> <!-- ashwani.TestCasePackage.TestCase1 -->
     </classes>
   </test> <!-- Test1(failed) -->
-  <test name="Test2(failed)">
-    <groups>
-      <run>
-        <include name="Smoke"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="ashwani.TestCasePackage.TestCase2">
-        <methods>
-          <include name="getMeLive"/>
-          <include name="Invoke"/>
-        </methods>
-      </class> <!-- ashwani.TestCasePackage.TestCase2 -->
-      <class name="ashwani.TestCasePackage.TestCase1">
-        <methods>
-          <include name="Invoke"/>
-        </methods>
-      </class> <!-- ashwani.TestCasePackage.TestCase1 -->
-    </classes>
-  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -31,8 +31,8 @@ public class BaseTest extends Reusable {
 		p=getDataFromPropertyFile();
 		
 		BrowserName=System.getProperty("Browser")!=null?System.getProperty("Browser"):p.getProperty("Browser");
-		// BrowserName= "Edgedriver";
-		if(BrowserName.equalsIgnoreCase("CHROME")) {
+		//BrowserName= "Edgedriver";
+		if(BrowserName.equalsIgnoreCase("Chrome")) {
 		System.setProperty("webdriver.chrome.driver", "E:\\chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.get(p.getProperty("URL"));
@@ -88,29 +88,30 @@ return System.getProperty("user.dir")+"\\ScreenShots\\"+TestcaseName+".png";
 	
 	
 	public ExtentReports getExtentReport(String Test) {
-		System.out.println("As2");
-		File path=new File("D:\\workspace100\\Youtube_Automation\\test-output\\index.html");
-		System.out.println("As1");
-		ExtentSparkReporter ex=new ExtentSparkReporter(path);
-		System.out.println("Ash1");
-		ex.config().setDocumentTitle("Yotube Testing Report");
-		System.out.println("Ash2");
-		ex.config().setReportName("Youtube Functionality Testing");
-		System.out.println("Ash3");
-		//ex.config().setTimeStampFormat("DD/MON/YY");
-		System.out.println("Ash4");
-		//ex.config().setTheme(theme);
-		ex.config().setReportName("Ashwani Singh");
-		System.out.println("Ash5");
-		ExtentReports exr=new ExtentReports();
-		System.out.println("Ash6");
-		exr.attachReporter(ex);
-		System.out.println("Ash7");
-		return exr;
 	
+		File path=new File("D:\\workspace100\\Youtube_Automation\\test-output\\index.html");
+
+		
+		ExtentSparkReporter ex=new ExtentSparkReporter(path);
+
+		ex.config().setDocumentTitle("Yotube Testing Report");
+	
+		ex.config().setReportName("Youtube Functionality Testing");
+
+		//ex.config().setTimeStampFormat("DD/MON/YY");
+	
+		//ex.config().setTheme(theme);
+		//ex.config().setReportName("Ashwani Singh");
+
+		ExtentReports exr=new ExtentReports();
+
+		exr.attachReporter(ex);
+	
+		return exr;
+		
 	}
 	
-	
+
 	
 	
 }

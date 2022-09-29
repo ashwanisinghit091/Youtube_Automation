@@ -6,13 +6,13 @@
       <class name="ashwani.TestCasePackage.TestCase2">
         <methods>
           <include name="close"/>
-          <include name="getMeLive"/>
           <include name="Invoke"/>
         </methods>
       </class> <!-- ashwani.TestCasePackage.TestCase2 -->
       <class name="ashwani.TestCasePackage.TestCase1">
         <methods>
           <include name="playMusicOnYoutube"/>
+          <include name="sortComments"/>
           <include name="close"/>
           <include name="Invoke"/>
         </methods>

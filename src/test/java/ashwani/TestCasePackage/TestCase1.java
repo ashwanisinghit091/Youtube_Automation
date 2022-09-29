@@ -75,7 +75,7 @@ public class TestCase1 extends BaseTest {
 	
 
 	
-	@Test(retryAnalyzer=RerunnerTest.class,groups="Smoke")	
+	@Test(retryAnalyzer=RerunnerTest.class)	
 	public void  sortComments() throws IOException, InterruptedException {
 	
 	d=new DefaultWebPage(driver);
@@ -91,9 +91,10 @@ public class TestCase1 extends BaseTest {
 
 	}
 	
-	@AfterMethod()
-	public void close() {
-		driver.close();	}
-	
+	@AfterMethod
+	public void close()
+	{
+		driver.close();
+	}
 	
 }

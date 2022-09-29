@@ -1,6 +1,7 @@
 package ashwani.YouTubeWebpagePackage;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 import org.bouncycastle.crypto.tls.SSL3Mac;
 import org.openqa.selenium.By;
@@ -11,11 +12,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import ashwani.ReusableMethods.Reusable;
 
 
 
 
-public class DefaultWebPage {
+
+public class DefaultWebPage extends Reusable{
 	Object o;
 	WebDriver driver;
 public DefaultWebPage(WebDriver driver) {
@@ -27,7 +30,7 @@ public DefaultWebPage(WebDriver driver) {
 	
 	
 	
-	@FindBy(css="ytd-rich-item-renderer[class=\"style-scope ytd-rich-grid-row\"]") List<WebElement> VideosWe;
+	@FindBy(css="ytd-rich-item-renderer[class=\"style-scope ytd-rich-grid-row\"] div[id=\"content\"]") List<WebElement> VideosWe;
 	
 	@FindBy(css="a[id=\"endpoint\"] tp-yt-paper-item yt-formatted-string") List<WebElement> LeftTabOptions;
 	@FindBy(css="div[class=\"glow-toaster-footer\"] span:first-of-type span[class=\"a-button-inner\"] input") WebElement locationwe;
@@ -36,12 +39,18 @@ public DefaultWebPage(WebDriver driver) {
 	@FindBy(css="div[id=\"search-input\"] input") WebElement searchWe;
 	@FindBy(css="ytd-video-renderer[class*=\"ytd-item-section-renderer\"]") List<WebElement> searchedOptionsWe;
 	
-	
+	@FindBy(css="div[id=\"main\"]") WebElement GoogleInfoAlert;
+	@FindBy(css="div[id=\"main\"] div yt-button-renderer[id=\"dismiss-button\"]") WebElement GoogleInFoDismisso;
 	public LoginWebPage playMusic() throws InterruptedException {
-	System.out.println("alka");
+
 	System.out.println(VideosWe.get(0).getText());
-	System.out.println("alka");
+	
 		//driver.findElement(By.linkText("Sign in securely")).click();
+        
+        if(GoogleInfoAlert.isDisplayed()) {
+        	GoogleInFoDismisso.click();
+        }
+     
 		VideosWe.stream().filter(s->s.getText().contains("Kesariya")).forEach(s->s.click());
 		return new LoginWebPage(driver);
 	}
@@ -71,7 +80,7 @@ public DefaultWebPage(WebDriver driver) {
 	Thread.sleep(1000);
 		Actions a=new Actions(driver);
 		a.sendKeys(Keys.ENTER).build().perform();
-		System.out.println("enter");
+	
 return new SearchResultWebPage(driver);
 		
 		

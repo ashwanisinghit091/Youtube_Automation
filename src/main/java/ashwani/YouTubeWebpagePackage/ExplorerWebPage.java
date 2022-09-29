@@ -25,7 +25,7 @@ public 	ExplorerWebPage(WebDriver driver) {
 	public TrendingWebPage SelectOptionFromExploreTab(String Option) {
 		System.out.println(Option);
 		exploreOptionsWe.stream().filter(s->s.getText().equalsIgnoreCase(Option)).forEach(s->s.click());
-		System.out.println(exploreOptionsWe.get(0).getText());
+		//System.out.println(exploreOptionsWe.get(0).getText());
 		return new TrendingWebPage(driver);
 	}
 

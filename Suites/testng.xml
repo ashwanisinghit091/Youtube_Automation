@@ -24,7 +24,7 @@
   <test name="Test1">
    <parameters>
 <parameter name="user" value="Ashwani"/>
-<parameter name="pswd" value="Alka"/>
+<parameter name="pswd" value="Succesfull"/>
 </parameters>
     <classes>
       <class name="ashwani.TestCasePackage.TestCase1"/>

@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import ashwani.Listeners.RerunnerTest;
 import ashwani.ReusableMethods.Reusable;
 import ashwani.YouTubeWebpagePackage.DefaultWebPage;
 import ashwani.YouTubeWebpagePackage.ExplorerWebPage;
@@ -30,7 +31,7 @@ public class TestCase2  extends BaseTest{
 	}
 	
 	
-	@Test()
+	@Test(retryAnalyzer=RerunnerTest.class)
 	public void getMeTrending() throws IOException {
 		d=new DefaultWebPage(driver);
 		Reusable r=new Reusable();
@@ -43,7 +44,7 @@ public class TestCase2  extends BaseTest{
 	
 	
 	
-	@Test(groups="Smoke")
+	@Test()
 	public void getMeLive() throws IOException, NumberFormatException, InterruptedException {
 		d=new DefaultWebPage(driver);
 		Reusable r=new Reusable();
